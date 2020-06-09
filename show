@@ -1,0 +1,22 @@
+<script type="text/javascript">
+                        Ext.MessageBox.buttonText.yes            = 'Yes';
+                        Ext.MessageBox.buttonText.no             = '<span style="text-decoration:underline;font-weight:bold;color:#000">No</>';
+                        // Set default button to receive focus when underlying window loses/regains focus
+                        Ext.MessageBox.getDialog().defaultButton = 2;
+                        Ext.MessageBox.show({
+                        title   : 'Please confirm',
+                        msg     : 'message',
+                        buttons : Ext.MessageBox.YESNO,
+                        scope   : this,
+                        animEl  : this.tree,
+                        icon    : Ext.MessageBox.QUESTION,
+                        fn: function(btn, text){
+                            if (btn == 'no'){
+                                    Ext.getCmp('publish').setValue(false);
+                            }
+                            if(btn == 'yes'){
+                             alert('yes is pressed');
+                             }
+                          });
+
+</script>
